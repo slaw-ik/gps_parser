@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/gps_parser/!svn/ver/6/trunk/db/migrate
+END
+20120222164428_add_index_to_pointers.rb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/gps_parser/!svn/ver/11/trunk/db/migrate/20120222164428_add_index_to_pointers.rb
+END
+20111125173334_create_pointers.rb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/gps_parser/!svn/ver/9/trunk/db/migrate/20111125173334_create_pointers.rb
+END

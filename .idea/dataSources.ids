@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?><component name="dataSourceStorage">
+  <data-source source="LOCAL" name="Rails gps_parser: development" product="" version="" jdbc-version="" driver-version="" uuid="dc69b4b5-ef22-4d59-80f0-48d9e0728ea5">
+    <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+    <jdbc-url>jdbc:mysql://127.0.0.1/parser_dev</jdbc-url>
+    <user-name>root</user-name>
+    <user-password>df9bdf98df99df9e</user-password>
+    <libraries>
+      <library>
+        <url>file://$USER_HOME$/.RubyMine32/config/jdbc-drivers/mysql-connector-license.txt</url>
+      </library>
+      <library>
+        <url>file://$USER_HOME$/.RubyMine32/config/jdbc-drivers/mysql-connector-java-5.1.16-bin.jar</url>
+      </library>
+    </libraries>
+  </data-source>
+  <data-source source="LOCAL" name="Rails gps_parser: test" product="" version="" jdbc-version="" driver-version="" uuid="5b57ceff-fc32-41d8-8f10-4096d652de26">
+    <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+    <jdbc-url>jdbc:mysql://127.0.0.1/parser_test</jdbc-url>
+    <user-name>root</user-name>
+    <user-password>df9bdf98df99df9e</user-password>
+    <libraries>
+      <library>
+        <url>file://$USER_HOME$/.RubyMine32/config/jdbc-drivers/mysql-connector-license.txt</url>
+      </library>
+      <library>
+        <url>file://$USER_HOME$/.RubyMine32/config/jdbc-drivers/mysql-connector-java-5.1.16-bin.jar</url>
+      </library>
+    </libraries>
+  </data-source>
+  <data-source source="LOCAL" name="Rails gps_parser: production" product="" version="" jdbc-version="" driver-version="" uuid="bf84de11-b170-41b6-957b-5c6898311094">
+    <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+    <jdbc-url>jdbc:mysql://127.0.0.1/parser_prod</jdbc-url>
+    <user-name>root</user-name>
+    <user-password>df9bdf98df99df9e</user-password>
+    <libraries>
+      <library>
+        <url>file://$USER_HOME$/.RubyMine32/config/jdbc-drivers/mysql-connector-license.txt</url>
+      </library>
+      <library>
+        <url>file://$USER_HOME$/.RubyMine32/config/jdbc-drivers/mysql-connector-java-5.1.16-bin.jar</url>
+      </library>
+    </libraries>
+  </data-source>
+</component>

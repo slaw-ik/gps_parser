@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/gps_parser/!svn/ver/3/trunk/app/views/home
+END
+search.html.haml
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/gps_parser/!svn/ver/10/trunk/app/views/home/search.html.haml
+END
+map.html.haml
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/gps_parser/!svn/ver/11/trunk/app/views/home/map.html.haml
+END
+full_desc.js.erb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/gps_parser/!svn/ver/9/trunk/app/views/home/full_desc.js.erb
+END
+index.html.haml
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/gps_parser/!svn/ver/10/trunk/app/views/home/index.html.haml
+END

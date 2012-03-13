@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 35
+/svn/gps_parser/!svn/ver/2/trunk/db
+END
+seeds.rb
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/gps_parser/!svn/ver/2/trunk/db/seeds.rb
+END
+schema.rb
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/gps_parser/!svn/ver/10/trunk/db/schema.rb
+END

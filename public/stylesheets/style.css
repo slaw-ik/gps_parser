@@ -1,0 +1,20 @@
+td {
+    font-family: arial;
+    font-size: 12px;
+    border: 1px solid green;
+}
+.description{
+   background-color: WhiteSmoke;
+    border: 1px solid blue;
+    border-radius: 10px 10px 10px 10px;
+    font-family: arial;
+    font-size: 12px;
+    min-height: 200px;
+    left: 70%;
+    margin: auto;
+    padding: 20px;
+    position: absolute;
+    top: 10px;
+    width: 300px;
+}
+

@@ -1,0 +1,23 @@
+=link_to "Map", :action => :map
+=link_to "Parse", :action => :parse
+
+= @resc_arr.size
+
+-#%table
+  - @resc_arr.each_with_index do |elem, index|
+    %tr
+      %td
+        = index
+      %td
+        = elem
+
+= @pointers.size
+%table
+  - @pointers.each_with_index do |elem, index|
+    %tr
+      %td
+        = index + 1
+      %td
+        "#{elem.latitude}, #{elem.longitude}"
+      %td
+        = elem.full_desc
