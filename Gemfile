@@ -10,7 +10,7 @@ gem 'geocoder'
 gem 'gmaps4rails'
 gem 'sass'
 gem 'nokogiri'
-gem 'mongrel'
+#gem 'mongrel', :group => :development
 gem 'unicode'
 gem 'haml'
 gem 'jquery-rails', '>= 1.0.12'
