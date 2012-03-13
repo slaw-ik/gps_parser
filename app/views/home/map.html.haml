@@ -1,7 +1,11 @@
 -#= gmaps4rails(@json)
 -#= gmaps("map_options" => { "auto_zoom" => false ,"center_latitude" => 48.471303,"center_longitude" => 22.882928}, "markers" => { "data" => @json})
 
-= gmaps({"map_options" => {"auto_adjust" => false, "auto_zoom" => true, "center_latitude" => 48.471303,"center_longitude" => 22.882928 }, "markers" => {"data" => @json }})
+= gmaps({"map_options" => {"auto_adjust" => false,
+                           "auto_zoom" => true,
+                           "center_latitude" => 48.471303,
+                           "center_longitude" => 22.882928 },
+         "markers" => {"data" => @json }})
 
 Results:
 = @size
