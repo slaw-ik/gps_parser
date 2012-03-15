@@ -1,0 +1,8 @@
+- @pointers.each_with_index do |elem, index|
+  .row
+    .numb
+      = index + 1
+    .coord
+      "#{elem.latitude}, #{elem.longitude}"
+    .full_desc
+      = elem.full_desc

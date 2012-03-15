@@ -3,7 +3,9 @@ GpsParser::Application.routes.draw do
   match 'home/map' => 'home#map'
   match 'home/parse' => 'home#parse'
   match 'home/full_desc' => 'home#full_desc'
+  match '/dynamic_content' => 'home#dynamic_content'
   match '/search' => 'home#search'
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

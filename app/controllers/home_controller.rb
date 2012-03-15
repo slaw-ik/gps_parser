@@ -64,7 +64,7 @@ class HomeController < ApplicationController
   end
 
   def index
-    @pointers = Pointers.all
+    @pointers = Pointers.limit(20)
     @resc_array = @@resc_arr
     @resc_arr = []
   end
@@ -76,6 +76,16 @@ class HomeController < ApplicationController
     respond_to do |format|
       format.js { render :layout => false }
     end
+  end
+
+  def dynamic_content
+    if session[:index].blank?
+      session[:index] = 1
+    else
+      session[:index] = session[:index] + 1
+    end
+    #@pointers = Pointers.limit(20).offset(session[:index]*20)
+    @pointers = Pointers.limit(20).offset(20)
   end
 
   def search
