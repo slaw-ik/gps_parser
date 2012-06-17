@@ -4,19 +4,53 @@ td {
     border: 1px solid green;
 }
 
+.wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+.left_section {
+    float: left;
+    width: 25%;
+    border-right: 2px #8fbc8f solid;
+}
+
 .description {
     background-color: WhiteSmoke;
     border: 1px solid blue;
     border-radius: 10px 10px 10px 10px;
     font-family: arial;
     font-size: 12px;
-    min-height: 200px;
-    left: 70%;
-    margin: auto;
+    min-height: 30px;
+    /*left: 70%;*/
+    /*margin: 5px auto;*/
     padding: 20px;
+    /*position: absolute;*/
+    /*top: 10px;*/
+    /*width: 100%;*/
+    /*width: 230px;*/
+}
+
+.search_block {
+    /*margin-left: 200px;*/
+    /*height: 100%;*/
+    width: 100%;
+
+}
+
+.results {
+
+}
+
+.search_form {
+
+}
+
+.map_section {
+    height: 98%;
+    margin-left: 25%;
     position: absolute;
-    top: 10px;
-    width: 300px;
+    width: 74%;
 }
 
 .scroll_container {
