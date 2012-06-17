@@ -1,18 +1,28 @@
 = javascript_include_tag 'jquery.scrollExtend'
 
 :javascript
+  var index = 1
   jQuery(document).ready(
     function() {
+
       jQuery('.scroll_container').scrollExtend(
         {
           'target': 'div#scroll_items',
-          'url': "/dynamic_content",
+          'url': "/dynamic_content?in="+index,
           'newElementClass': 'list_item more_content'
-          //alert('hello');
         }
       );
     }
+
   );
+  $(window).scroll(function()
+  {
+      if (document.body.scrollHeight - $(this).scrollTop()  <= $(this).height())
+      {
+          index = index + 1;
+          alert(index);
+      }
+  });
 
 
 =link_to "Map", :action => :map
