@@ -2,26 +2,44 @@
 
 :javascript
   var index = 1
-  jQuery(document).ready(
-    function() {
+  //jQuery(document).ready(
+  //  function() {
 
-      jQuery('.scroll_container').scrollExtend(
-        {
-          'target': 'div#scroll_items',
-          'url': "/dynamic_content?in="+index,
-          'newElementClass': 'list_item more_content'
-        }
-      );
-    }
+      //jQuery('.scroll_container').scrollExtend(
+      //  {
+      //    'target': 'div#scroll_items',
+      //    'url': "/dynamic_content?in="+index,
+      //    'newElementClass': 'list_item more_content'
+      //  }
+      //);
+    //}
+  //
+  //);
 
-  );
-  $(window).scroll(function()
+  $(window).scroll(
+  function()
   {
-      if (document.body.scrollHeight - $(this).scrollTop()  <= $(this).height())
+
+    var fire = $("#hid_inp").attr("value");
+
+      if ((document.body.scrollHeight - $(this).scrollTop()  > $(this).height()) && (fire == "1"))
+      {
+        fire = "0";
+      };
+
+      if ((document.body.scrollHeight - $(this).scrollTop()  <= $(this).height()) && (fire == "0"))
       {
           index = index + 1;
-          alert(index);
-      }
+
+          $.get("/dynamic_content?in="+index,
+            function(data) {
+              $('.scroll_container').html(data);
+              alert('Load was performed.');
+          });
+          //$(document).attr('title',index);
+          fire = "1";
+      };
+      $("#hid_inp").attr("value", fire);
   });
 
 
@@ -30,6 +48,8 @@
 
 = @resc_arr.size
 = @pointers.size
+
+%input{:id=>"hid_inp", :type => "hidden", :value => "0"}
 
 .scroll_container
   = render :partial => 'pointers'
