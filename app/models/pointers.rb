@@ -2,6 +2,9 @@ class Pointers < ActiveRecord::Base
   attr_accessible :latitude, :longitude, :gmaps, :description, :full_desc
   acts_as_gmappable :process_geocoding => false
 
+  validates :latitude, :presence => true,  :uniqueness => {:scope => :longitude}
+
+
   def gmaps4rails_address
     #self.address #describe how to retrieve the address from your model
         "#{self.latitude}, #{self.longitude}"

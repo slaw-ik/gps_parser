@@ -2,41 +2,34 @@
 
 :javascript
   var index = 1
-  //jQuery(document).ready(
-  //  function() {
+  jQuery(document).ready(
+    function() {
+    //
+    //
+    }
 
-      //jQuery('.scroll_container').scrollExtend(
-      //  {
-      //    'target': 'div#scroll_items',
-      //    'url': "/dynamic_content?in="+index,
-      //    'newElementClass': 'list_item more_content'
-      //  }
-      //);
-    //}
-  //
-  //);
+  );
 
   $(window).scroll(
   function()
   {
 
     var fire = $("#hid_inp").attr("value");
+    var add_pointers = $("#add_pointers").attr("value");
 
       if ((document.body.scrollHeight - $(this).scrollTop()  > $(this).height()) && (fire == "1"))
       {
         fire = "0";
       };
 
-      if ((document.body.scrollHeight - $(this).scrollTop()  <= $(this).height()) && (fire == "0"))
+      if ((document.body.scrollHeight - $(this).scrollTop()  <= $(this).height()) && (fire == "0") && (add_pointers == "1"))
       {
           index = index + 1;
 
-          $.get("/dynamic_content?in="+index,
+          $.get("/dynamic_content?index="+index,
             function(data) {
-              $('.scroll_container').html(data);
-              alert('Load was performed.');
+              data;
           });
-          //$(document).attr('title',index);
           fire = "1";
       };
       $("#hid_inp").attr("value", fire);
@@ -49,6 +42,7 @@
 = @resc_arr.size
 = @pointers.size
 
+%input{:id=>"add_pointers", :type => "hidden", :value => "1"}
 %input{:id=>"hid_inp", :type => "hidden", :value => "0"}
 
 .scroll_container

@@ -1,19 +1,19 @@
 -#= gmaps4rails(@json)
 -#= gmaps("map_options" => { "auto_zoom" => false ,"center_latitude" => 48.471303,"center_longitude" => 22.882928}, "markers" => { "data" => @json})
+.wrapper
+  .left_section
+    .description
+      Description...
 
-= gmaps({"map_options" => {"auto_adjust" => false,
-                           "auto_zoom" => true,
-                           "center_latitude" => 48.471303,
-                           "center_longitude" => 22.882928 },
-         "markers" => {"data" => @json }})
+    .search_block
+      .results
+        Results:
+        = @size
 
-Results:
-= @size
-
-.description
-  Description...
-
-= form_tag("/search", :method => "get") do
-  = label_tag(:q, "Search for:")
-  = text_field_tag(:q)
-  = submit_tag("Search")
+      .search_form
+        = form_tag("/search", :method => "get") do
+          = label_tag(:q, "Search for:")
+          = text_field_tag(:q)
+          = submit_tag("Search")
+  .map_section
+    = gmaps({"map_options" => {"auto_adjust" => false,"auto_zoom" => true, "center_latitude" => 48.471303, "center_longitude" => 22.882928 },"markers" => {"data" => @json }})

@@ -41,7 +41,6 @@ class HomeController < ApplicationController
             rescue
               @resc_arr << latitude + ", " + longitude
             end
-
           end
           #if index==2
           #  break
@@ -79,13 +78,14 @@ class HomeController < ApplicationController
   end
 
   def dynamic_content
-    if session[:index].blank?
-      session[:index] = 1
+    @index = params[:index].to_i * 20 - 20
+    unless @add_pointers.blank?
+      @pointers = @add_pointers
     else
-      session[:index] = session[:index] + 1
+      @pointers = Pointers.limit(20).offset(@index)
+      @add_pointers = Pointers.limit(20).offset(@index + 20)
     end
-    #@pointers = Pointers.limit(20).offset(session[:index]*20)
-    @pointers = Pointers.limit(20).offset(20)
+
   end
 
   def search

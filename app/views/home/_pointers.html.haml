@@ -1,7 +1,8 @@
+- @index = 0 if @index.nil?
 - @pointers.each_with_index do |elem, index|
   .row
     .numb
-      = index + 1
+      = @index + index + 1
     .coord
       "#{elem.latitude}, #{elem.longitude}"
     .full_desc

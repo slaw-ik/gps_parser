@@ -1,1 +1,4 @@
 $(".scroll_container").append("<%= escape_javascript render(:partial => "pointers", :object => @pointers)%>")
+<%- if @add_pointers.nil? || @add_pointers.length == 0%>
+$("#add_pointers").attr("value","0")
+<%- end %>
